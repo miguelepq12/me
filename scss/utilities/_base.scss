@@ -1,0 +1,38 @@
+@import "compass";
+
+%nav_bg1 {
+    background-color:  rgba(242,242,242,1);
+    @include filter-gradient(#f2f2f2, #e0e0e0, horizontal);
+    @include background-image(linear-gradient(left bottom, rgba(242,242,242,1) 0%, rgba(240,240,240,1) 12%, rgba(235,235,235,1) 27%, rgba(230,230,230,1) 73%, rgba(224,224,224,1) 100%));
+}
+
+
+%nav_bg2 {
+    background-color:  rgb(250, 250, 250);
+}
+
+%nav_bg3 {
+    background-color: rgba(252,252,252,1);
+    @include filter-gradient(#fcfcfc, #fafafa, horizontal);
+    @include background-image(linear-gradient(left bottom, rgba(252,252,252,1) 0%, rgba(252,252,252,1) 52%, rgba(250,250,250,1) 85%, rgba(252,252,252,1) 97%, rgba(252,252,252,1) 99%));
+}
+
+%nav_bg4 {
+    background-color: rgba(214, 214, 214, 0.158);
+}
+
+%effect-parallax{
+    display: table;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.row{
+    margin: 0px;
+}

@@ -1,0 +1,13 @@
+/* line 2, ../../scss/blog/main.scss */
+.blog-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  /* line 9, ../../scss/blog/main.scss */
+  .blog-body img {
+    width: 10%; }
+  /* line 13, ../../scss/blog/main.scss */
+  .blog-body h4 {
+    margin-top: 20px; }

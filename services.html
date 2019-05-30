@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Miguel Piña</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/services/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav id="navbar" class="navbar">
+        <div id="nav-img" class="nav-img">
+            <img id="nav-image" src="img/img_profile.jpg" alt="img_profile">
+        </div>
+        <div id="nav" class="nav">
+            <a class="navbar-active" href="index.html">
+                <div class="text">Miguel Piña</div>
+            </a>
+            <a href="aboutme.html">
+                <img src="img/aboutme.png" alt="">
+                <div class="text">Sobre mi</div>
+            </a>
+            <a href="projects.html">
+                <img src="img/briefcase.png" alt="">
+                <div class="text">Portafolio</div>
+            </a>
+            <a class="navbar-item-active" href="services.html">
+                <img src="img/services.png" alt="">
+                <div class="text">Servicios</div>
+            </a>
+            <a href="blog.html">
+                <img src="img/blog.png" alt="">
+                <div class="text">Blog</div>
+            </a>
+            <a class="navbar-active" href="javascript:collapsingNavButton();">
+                <img src="img/svg/menu.svg" alt="">
+            </a>
+        </div>
+    </nav>
+
+    <div id="services" class="services-body">
+        <h4>SERVICIOS</h4>
+        <div id="row-services" class="row-services">
+            <div class="row">
+                <div id="s-item-0" class="service col-md-4">
+                    <a href="#" onclick="clickService(0,0);return false;">
+                        <img src="img/svg/services-page-web.svg" alt="img_service1">
+                        <h5>Desarrollo de pagina web informativa</h5>
+                    </a>
+                </div>
+                <div id="s-item-1" class="service col-md-4">
+                    <a href="#" onclick="clickService(1,0);return false;">
+                        <img src="img/svg/services-app-web.svg" alt="img_service2">
+                        <h5>Desarrollo de aplicación web</h5>
+                    </a>
+
+                </div>
+                <div id="s-item-2" class="service col-md-4">
+                    <a href="#" onclick="clickService(2,0);return false;">
+                        <img src="img/svg/services-app-mobile.svg" alt="img_service3">
+                        <h5>Desarrollo de aplicación Android</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div id="s-item-3" class="service col-md-4">
+                    <a href="#" onclick="clickService(3,1);return false;">
+                        <img src="img/svg/sevices-app-mob-multi.svg" alt="img_service1">
+                        <h5>Desarrollo de aplicación movil multiplataforma (Android, iOS, Windows)</h5>
+                    </a>
+                </div>
+                <div id="s-item-4" class="service col-md-4">
+                    <a href="#" onclick="clickService(4,1);return false;">
+                        <img src="img/svg/services-app-multi.svg" alt="img_service2">
+                        <h5>Desarrollo de aplicación multiplataforma (Movil y Web)</h5>
+                    </a>
+
+                </div>
+            </div>
+            <div id="dialog-description" class="row description">
+                <h5>Precio Promedio: <span id="service-price">100$</span></h5>
+                <h6>Descripción</h6>
+                <p id="service-description"></p>
+                <h6>Caracteristicas</h6>
+                <div class="col-md-12">
+                    <ul id="service-feactures"></ul>
+                </div>
+                <form action="" method="post">
+                    <input type="email" class="form-control" id="email"
+                        placeholder="Ingrese su correo electronico para más información">
+                    <button type="submit" class="btn btn-primary">Pedir presupueto</button>
+                </form>
+                <div class="btn-cancel">
+                    <button onclick="openCloseDescription(false,1);" class="btn btn-danger">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><br>Miguel Piña 2019 &COPY;</p>
+    </footer>
+
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/shrink-header.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/services/services.js"></script>
+    <script src="js/services/onload.js"></script>
+
+</body>
+
+</html>

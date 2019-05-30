@@ -1,0 +1,323 @@
+@import "vars";
+@import "mixins/base";
+@import "utilities/base";
+@import "compass";
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins/breakpoints";
+
+%button {
+    @extend %nav_bg3; 
+    @include shadow(0px, 1px, 6px, 0px, rgba(0,0,0,0.3));
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(53, 53, 53);
+    font-weight: 600;
+    border-radius: 3px;
+    z-index: 50;
+    
+    &:hover{
+        @include shadow(0px, 1px, 6px, 0px, rgba(0,0,0,0.4));
+        @extend %nav_bg1; 
+    }
+}
+
+%project-item{
+    display: flex;
+        justify-content: start;
+        align-items: center;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        color: #a1a1a1;
+        margin-top: 15px;
+        
+        img{
+            @include img-circle(40,1px); 
+            opacity: 0.75;
+        }
+        p{
+            margin: auto;
+        }
+}
+
+%area{
+    height: 50vh;
+    position: relative;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        height: 50px;
+        width: 50px;
+        opacity: 0.5;
+    }
+    p{
+        font-family: 'Roboto', sans-serif;
+        margin-top: 20px;
+    }
+}
+
+.aboutme{
+    @extend %effect-parallax;
+  
+    .area-studies{
+        @extend %area;
+        background-color: #e0e0e0;   
+    }
+
+    .area-personal{
+        @extend %area;
+        background-color: #eeeeee;  
+    }
+
+    .area-jobs{
+        @extend %area;
+        background-color: #eeeeee; 
+    }
+
+    .area-skills{
+        @extend %area;
+        background-color: #e0e0e0;  
+    }
+
+    .button{
+        @extend %button;
+        width: 10vw;
+        height: 10vw;
+        border-radius: 5vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -5vw;
+        margin-left: -5vw;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.5vw; 
+        font-weight: 700;
+    }
+}
+
+@include media-breakpoint-down(sm) { 
+    .aboutme .button{
+        visibility: hidden;
+    }
+}
+
+.projects{
+    padding: 10vw;
+
+    .project-card{
+        padding: 20px 10px;
+        @include shadow(0px, 1px, 6px, 0px, rgba(0,0,0,0.3));
+    }
+
+    .list{
+        padding: 20px 0px;
+        border-right: 1px solid #0000001a;
+    }
+
+    .projects-title{
+        text-align: right;
+        font-family: 'Roboto', sans-serif;
+        margin-right: 10px;
+        font-weight: 600;
+
+    }
+
+    .project-item{
+        @extend %project-item;
+
+        &:hover {
+            color: #474747;
+            img{
+                opacity: 1;
+                @include shadow(0px, 1px, 6px, 0px, rgba(0,0,0,0.3));
+            }
+        }
+    }
+
+    .project-item-plus{
+        @extend %project-item;
+        color: #474747;
+        font-variant-caps: small-caps;
+        font-weight: 600;
+        p{
+            margin-right: 10px;
+        }
+    }
+
+    .project-item-selected{
+       @extend %project-item;
+       font-weight: 700;
+       color: #00567e;
+       border-right: 4px solid #00567e;
+
+        img{
+            opacity: 1;
+            @include shadow(0px, 1px, 6px, 0px, rgba(0,0,0,0.3));
+        }
+    }
+
+    .content{
+        font-family: 'Roboto', sans-serif;
+        position: relative;
+        .img{
+            background: url(../img/projects-logo/germany-logo.png);
+            width: 100%;
+            height: 25vh;
+            @include shadow(0px, 1px, 6px, 0px, rgba(0,0,0,0.3));
+        }
+        h4{
+            margin-top: 10px;
+            text-align: center;
+        }
+        .text{
+            margin-top: 10px;
+            text-align: justify;
+        }
+        .data{
+            text-align: right;
+            font-size: 20px;
+            opacity: 0.80;
+        }
+    }
+
+    .move-up{
+        animation: move-box 1s forwards;
+    }
+
+    .move-down{
+        animation: move-box 1s reverse forwards;
+    }
+
+    @keyframes move-box {
+        from{
+            transform: translateY(0%);
+        }
+        to{
+            transform: translateY(-100%);
+        }
+    }
+}
+
+.services{  
+    padding: 10vw;
+    h4{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+    }
+    .row-services{
+        border-radius: 10px;
+        @include shadow(0px, 1px, 6px, 0px, rgba(0,0,0,0.3));
+    }
+
+    .service{
+        padding: 40px 20px;
+        text-align: center;
+        a{
+            text-decoration: none;
+            color: rgb(53, 53, 53);
+        }
+    
+        img{
+             width: 10vw;
+
+             @include media-breakpoint-down(sm) {
+               width: 30vw;
+            }
+        }
+
+
+
+        h5{
+            margin-top: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+        }
+        
+        &:hover {
+            background-color:  rgba(242,242,242,1);
+
+            img{
+                opacity: 1;
+            }
+        }
+    }
+
+    .press{
+        background-color:  rgba(242,242,242,1);
+    }
+
+    .button{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        text-decoration: none;
+        color: #474747;
+        margin-right: 5px;
+        position: absolute;
+        right: 10.3vw;
+        margin-top: 5px;
+        font-variant-caps: small-caps;
+    }
+
+    .description{
+        background-color:  rgba(242,242,242,1);
+        font-family: 'Roboto', sans-serif;
+        overflow: hidden;
+        height: auto;
+
+        padding: 0vw;
+        max-height: 0px;
+        p{
+            width: 100%;
+            text-align: justify;
+            margin-left: 15px;
+        }
+        
+        h5{
+            width: 100%;
+            text-align: right; 
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        h6{
+            font-weight: 600;
+            font-size: larger;
+        }
+
+        ul{
+            padding-left: 0px;
+            margin-left: 20px;
+        }
+    }
+
+    form{
+        width: 100%;
+        padding: 20px;
+        display: flex;
+
+        button{
+            margin: 0px 10px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            flex-wrap: wrap;
+
+            button{
+                margin: 10px auto;
+            }
+        }
+        
+    }
+       
+    .btn-cancel{
+        width: 100%;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+}

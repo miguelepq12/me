@@ -1,0 +1,240 @@
+@import "vars";
+@import "mixins/base";
+@import "utilities/base";
+@import "compass";
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins/breakpoints";
+
+.header{
+    @extend %effect-parallax;
+    @extend %nav_bg3; 
+    height: 75vh;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    .img{
+        background: url(../img/bg_header.jpg) no-repeat center center fixed;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        filter: blur(6px);
+    }
+    .text{
+        text-align: center;
+        color: whitesmoke;
+        position: fixed;
+    }
+}
+
+.navbar{
+    width: 100%;
+    height: $height-navbar;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    @extend %nav_bg3;
+    @include shadow(0px, 1px, 6px, 0px, rgba(0,0,0,0.3));
+
+    .nav-img{
+        width: 20%;
+        display: flex; 
+        justify-content: center; 
+        z-index: 100;
+        img{
+            border: 2px solid rgba(252,252,252,1);
+            margin-top: -120px;
+            @include img-circle($size-img-profile-big,1px);
+            @include shadow(0px, 1px, 6px, 0px, rgba(0,0,0,0.3));
+        }
+    }
+
+    .anim-big{
+        animation: size-img-big 1s forwards;
+    }
+
+    .anim-small{
+        animation: size-img-small 1s forwards;
+    }
+
+    @keyframes size-img-big {
+        from {
+            margin-top: -100px;
+            @include img-circle($size-img-profile-medium,1px);
+        }
+        to {
+            margin-top: -120px;
+            @include img-circle($size-img-profile-big,1px);
+        }
+    }
+
+    @keyframes size-img-small {
+        from {
+            margin-top: -120px;
+            @include img-circle($size-img-profile-big,1px);
+        }
+        to {
+            margin-top: -100px;
+            @include img-circle($size-img-profile-medium,1px);
+        }
+    }
+
+    .nav{
+        position: relative;
+        width: 80%;
+        margin-bottom: $adjust-navbar;
+    }
+
+
+    a {
+        width: $size-item-navbar;
+        height: $height-navbar;
+        color: $text-color-navbar;
+        text-align: center;
+        text-decoration: none;
+        padding: 20px 0px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        @include skew(-20deg,0); 
+
+        &:hover {
+            @extend %nav_bg1;
+        }
+        
+        .text{
+            margin-left: 6px;
+            @include skew(20deg,0);
+        }
+
+        img{
+            opacity: 0.3; 
+            height: 20px; 
+            width: 20px; 
+            margin-bottom: 3px;
+            @include skew(20deg,0);
+        }
+      }
+
+      a:last-child{
+        display: none;
+      }
+
+      .navbar-item-active{
+        @extend %nav_bg1;
+      }
+}
+
+@include media-breakpoint-down(md) {
+    a:first-child{
+        margin-left: 2vw;
+      }
+}
+
+@include media-breakpoint-down(sm) {
+    .nav a:not(:first-child):not(:last-child){
+        display: none;
+    }
+    
+    .nav a:first-child{
+        width: 80%;
+
+        @include skew(0deg,0);
+
+        .text{ 
+            @include skew(0deg,0);
+        }
+       
+    }
+
+    .nav a:last-child{
+        width: 20%;
+        display: block;
+        position: absolute;
+        right: 0px;
+        @include skew(0deg,0);
+
+        img{
+            height: 90%;
+            width: 90%;
+            opacity: 1; 
+            @include skew(0deg,0);
+        }
+    }
+   
+    .navbar .nav{
+        width: 100%;
+    }
+
+    .navbar .nav-img{
+        position: absolute;
+        top:95px;
+        img{
+            @include img-circle($size-img-profile-medium,1px);
+        }
+    }
+
+    @keyframes size-img-big {
+        from {
+            margin-top: -100px;
+            @include img-circle($size-img-profile-small,1px);
+        }
+        to {
+            margin-top: -120px;
+            @include img-circle($size-img-profile-medium,1px);
+        }
+    }
+
+    @keyframes size-img-small {
+        from {
+            margin-top: -120px;
+            @include img-circle($size-img-profile-medium,1px);
+        }
+        to {
+            margin-top: -100px;
+            @include img-circle($size-img-profile-small,1px);
+        }
+    }
+
+    .nav.responsive a:not(:first-child):not(:last-child){
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: rgba(252,252,252,1);
+        @include skew(0deg,0); 
+
+        .text{
+            @include skew(0deg,0);
+        }
+
+        img{
+            @include skew(0deg,0);
+        }
+
+    }
+
+    .nav.responsive a:nth-last-child(2){
+        @include shadow(-1px, 8px, 6px, -8px, rgba(0,0,0,0.3));
+    }
+
+    .nav.responsive .navbar-active{
+        background-color:  rgba(242,242,242,1);
+      }
+  }
+
+
+footer{
+    @extend %nav_bg3;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: $height-footer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    @include shadow(0px, 1px, 6px, 0px, rgba(0,0,0,0.3));
+}
+

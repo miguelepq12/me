@@ -1,0 +1,207 @@
+@import "vars";
+@import "mixins/base";
+@import "utilities/base";
+@import "compass";
+@import "../../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins/breakpoints";
+
+.tabs-layout{
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+
+    .tabs{
+        width: 50%;
+        height: 8vh;
+        display: flex;
+        margin: auto;
+        margin-top:3vw;
+        @include skew(-15deg,0); 
+        @include shadow(0px, 1px, 3px, 0px, rgba(0,0,0,0.3));
+    }
+
+    .tab{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600; 
+
+        &:hover{
+            @extend %nav_bg1;
+        }
+
+        .text{
+            @include skew(15deg,0);  
+        }
+    }
+
+    .active{
+        @extend %nav_bg1;
+    }
+
+    .tabs-body{
+        display: flex;
+        overflow: hidden;
+        align-items: flex-start;
+    }
+}
+.list{
+    width: 100%;
+    flex: none;
+    position: relative;
+}
+
+.list-projects{
+
+    .project-item{
+        margin: 3vw;
+        @include shadow(0px, 1px, 3px, 0px, rgba(0,0,0,0.3));
+    }
+
+    .project-item-gallery{
+        img{
+            height:0vh;
+            object-fit: cover; 
+        }
+    }
+
+    .hide{
+        display: none;
+    }
+    
+    .project-item-main{
+        display: flex;
+
+        
+        .img{
+            width: 45%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .body{
+            width: 55%;
+        }
+
+        p{
+            text-align: justify;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        h4{
+            font-size: xx-large;
+        }
+        h5{
+            text-align: right;
+            opacity: 0.8;
+            font-weight: 700;
+        }
+
+        .padding{
+            padding: 5%;
+        }
+
+        button{
+            width: 100%;
+            padding: 20px 0px;
+            border: none;
+            font-weight: 700;
+            @extend %nav_bg3;
+            cursor: pointer;
+            border: solid 0.1px rgba(0, 0, 0, 0.096) ;
+
+            &:hover{
+                @extend %nav_bg1;
+            }
+
+            &:focus {outline:0;}
+        }
+
+        .select{
+            @extend %nav_bg1;
+        }
+
+        
+        @include media-breakpoint-down(sm) {
+            flex-wrap: wrap;
+                .img{
+                    width: 100%;
+                    height: 30vh;
+                }
+                
+                .body{
+                    width: 100%;
+                    min-height: 0vh;
+                }
+        }
+    }
+
+    
+}
+
+.list-clients{
+    margin-top: 3vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .client-item{
+        border-radius: 5px;
+        display: flex;
+        margin: 2vw;
+        transition: transform 1s;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+
+        @include shadow(0px, 1px, 3px, 0px, rgba(0,0,0,0.3));
+    }
+
+
+    .img{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        img{
+            @include img-circle(8,1vw);
+            align-self: center;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .img{
+            padding: 10px;
+            img{
+                @include img-circle(15,1vw);
+            }
+        }
+    }
+
+    .content-client{
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h6{
+            text-align: center;
+            font-weight: 700;
+            opacity: 0.8;
+        }
+
+        p{
+            text-align: center;
+        }
+    }
+
+   
+}
+
+
+

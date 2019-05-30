@@ -1,0 +1,11 @@
+@mixin shadow($hl, $vl,$blur,$spread,$color) {
+    -webkit-box-shadow:$hl $vl $blur $spread $color;
+    -moz-box-shadow: $hl $vl $blur $spread $color;
+    box-shadow: $hl $vl $blur $spread $color;
+}
+
+@mixin img-circle($size,$format) {
+    width: $size*$format;
+    height: $size*$format;
+    border-radius: $size/2*$format;
+}

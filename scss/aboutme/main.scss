@@ -1,0 +1,223 @@
+@import "vars";
+@import "mixins/base";
+@import "utilities/base";
+@import "compass";
+@import "../../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins/breakpoints";
+
+%side-arrow{
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5%;
+    cursor: pointer;
+    opacity: 0.8;
+    z-index: 10;
+    
+    &:hover{
+        @extend %nav_bg1;
+    }
+
+    img{
+        height: 3vw;
+        width: 3vw;
+    }
+}
+
+
+
+.body-aboutme{
+    height: fit-content;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+
+    .box-aboutme{
+        display: flex;
+        height: fit-content;
+        margin: 8vw 0px;
+        width: 90vw;
+        @include shadow(0px, 1px, 6px, -2px, rgba(0,0,0,0.3));
+    }
+
+    .sidenav{
+        @extend %nav_bg3;
+        
+        width: 6vw;
+       
+        @include shadow(1px, 1px, 4px, -1px, rgba(0,0,0,0.3));
+    }
+
+    .adjust{
+        z-index: 20;
+    }
+
+    .sidenav-item{
+        padding: 15px 0px;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden;
+       
+        
+        &:hover{
+            @extend %nav_bg1;
+            
+            .text{
+                display:block;
+            }
+
+            img{
+                width: 50%;
+            }
+        }
+
+        img{
+            width: 40%;
+            opacity: 0.75;
+        }
+        .text{
+            display: none;
+            font-size: 0.6em;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+    }
+
+    
+    .sidenav-item.select{
+        @extend %nav_bg1;
+            
+        .text{
+            display:block;
+        }
+        img{
+            width: 50%;
+        }
+    }
+
+    .content{
+        width: 100%;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .side-arrow-left{
+        @extend %side-arrow;
+        @include shadow(3px, 0px, 5px, -3px, rgba(0,0,0,0.3));
+    }
+    .side-arrow-right{
+        @extend %side-arrow;
+        @include shadow(-3px, 0px, 5px, -3px, rgba(0,0,0,0.3));
+    }
+
+    .box-content{
+        width:90%;
+        display: flex;
+        overflow: hidden;
+        align-items: flex-start;
+    }
+    
+    .box-content-item{
+        @extend %nav_bg3;
+        min-height: 50vh;
+        z-index: 5;
+        width: 100%;
+        flex: none;
+        position: relative;
+        
+        .img{
+            width: 100%;
+            height: 30vh;
+        }
+
+        .text{
+            padding: 30px;
+        }
+
+        p{
+            text-align: justify;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        h4{
+            font-weight: 700;
+        }
+    }
+
+    .move-box{
+        animation: move-up 1s;
+    }
+
+    @keyframes move-up {
+        from{
+            transform: translateY(0%);
+        }
+        50%{
+            transform: translateY(-100%)
+        }
+        to{
+            transform: translateY(0%);
+        }
+    }
+
+    .reduce-expand{
+        animation: reduce-item 1s;
+    }
+
+    @keyframes reduce-item {
+        from{
+            height: 100% ;
+        }
+        to{
+            transform: 0%;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .box-aboutme{
+            display: flex;
+             flex-direction: column;
+        }
+    
+        .sidenav{
+            width:100%;
+            @include shadow(0px, 3px, 4px, -4px, rgba(0,0,0,0.3));
+        }
+
+        .sidenav-item{
+            padding: 10px 0px;
+            display: flex;
+            align-items: center;
+            img{
+                width: 10%;
+                margin: 0px 20px;
+            }
+            .text{
+                display: block;
+            }
+        }
+
+        .sidenav-item.select{
+            img{
+                width: 10%;
+            }
+        }
+
+        .side-arrow-left{
+            height: auto;
+            width: 10%;
+        }
+        .side-arrow-right{
+            height: auto;
+            width: 10%;
+        }
+    }
+}
+
+
+

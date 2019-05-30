@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Miguel Piña</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="header" class="header">
+        <div class="img"></div>
+        <div id="text-header" class="text">
+            <h1 style="font-weight: 700">Miguel Piña</h1>
+            <h6 style="opacity: 0.5;">JAVA DEVELOPER</h6>
+        </div>
+    </div>
+    <nav id="navbar" class="navbar">
+        <div id="nav-img" class="nav-img">
+            <img id="nav-image" src="img/img_profile.jpg" alt="img_profile">
+        </div>
+        <div id="nav" class="nav">
+            <a class="navbar-active" href="index.html">
+                <div class="text">Miguel Piña</div>
+            </a>
+            <a href="aboutme.html">
+                <img src="img/aboutme.png" alt="">
+                <div class="text">Sobre mi</div>
+            </a>
+            <a href="projects.html">
+                <img src="img/briefcase.png" alt="">
+                <div class="text">Portafolio</div>
+            </a>
+            <a href="services.html">
+                <img src="img/services.png" alt="">
+                <div class="text">Servicios</div>
+            </a>
+            <a href="blog.html">
+                <img src="img/blog.png" alt="">
+                <div class="text">Blog</div>
+            </a>
+            <a class="navbar-active" href="javascript:collapsingNavButton();">
+                <img src="img/svg/menu.svg" alt="">
+            </a>
+        </div>
+    </nav>
+
+    <div id="aboutme" class="aboutme">
+        <div class="row">
+            <div class="area-studies col-md-6">
+                <div class="content-area">
+                    <img src="img/svg/school.svg" onerror="this.onerror=null; this.src='img/school.png'">
+                    <p>Estudiante de ingeniería en informatica en la <br>Universidad Rafael Belloso Chacín, Maracaibo,
+                        Zulia.
+                    </p>
+                </div>
+            </div>
+            <div class="area-personal col-md-6">
+                <div class="content-area">
+                    <img src="img/svg/personal.svg" onerror="this.onerror=null; this.src='img/personal.png'">
+                    <p>Apasionado desarrollador desde joven. <br/>Comprometido y responsable con sus proyectos.
+                    </p>
+                </div>
+            </div>
+            <div class="area-jobs col-md-6">
+                <div class="content-area">
+                    <img src="img/svg/jobs.svg" onerror="this.onerror=null; this.src='img/jobs.png'">
+                    <p>Experiencia principalmente en Java y Android nativo. <br/>Conocedor practico de lenguajes como C#, PHP
+                        y JS. <br/>Actualmente desarrollador web con el framework Spring.</p>
+                </div>
+            </div>
+            <div class="area-skills col-md-6">
+                <div class="content-area">
+                    <img src="img/svg/skills.svg" onerror="this.onerror=null; this.src='img/skills.png'">
+                    <p>Conocimientos sólidos en diseño y creación de base de datos, metodologías de desarrollo ágil,
+                        patrones de diseño, redes y diseño de algoritmos.</p>
+                </div>
+            </div>
+            <a class="button" href="aboutme.html">+</a>
+        </div>
+    </div>
+
+    <div class="projects">
+        <div class="project-card">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="list">
+                        <h4 class="projects-title">PROYECTOS</h4>
+                        <a href="#" id="p-item-0" onclick="changeItem(0);return false;" class="project-item-selected">
+                            <img src="img/projects-logo/germany-logo.png" alt="">
+                            <p>Reportes Germany</p>
+                        </a>
+                        <a href="#" id="p-item-1" onclick="changeItem(1);return false;" class="project-item">
+                            <img src="img/projects-logo/myt-logo.png" alt="">
+                            <p>MYT Construcciones</p>
+                        </a>
+                        <a href="projects.html" onclick="return false;" class="project-item-plus">
+                            <p>Ver más</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8" style="overflow: hidden">
+                    <div class="content">
+                        <div id="box" class="box-content">
+                            <div id="project-content-img" class="img"></div>
+                            <h4 id="project-content-title"></h4>
+                            <p id="project-content-text" class="text"></p>
+                            <p id="project-content-data" class="data"></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services" class="services">
+        <h4>SERVICIOS</h4>
+        <div id="row-services" class="row-services">
+            <div class="row">
+                <div id="s-item-0" class="service col-md-4">
+                    <a href="#" onclick="clickService(0);return false;">
+                        <img src="img/svg/services-page-web.svg" alt="img_service1">
+                        <h5>Desarrollo de pagina web informativa</h5>
+                    </a>
+                </div>
+                <div id="s-item-1" class="service col-md-4">
+                    <a href="#" onclick="clickService(1);return false;">
+                        <img src="img/svg/services-app-web.svg" alt="img_service2">
+                        <h5>Desarrollo de aplicación web</h5>
+                    </a>
+
+                </div>
+                <div id="s-item-2" class="service col-md-4">
+                    <a href="#" onclick="clickService(2);return false;">
+                        <img src="img/svg/services-app-mobile.svg" alt="img_service3">
+                        <h5>Desarrollo de aplicación Android</h5>
+                    </a>
+                </div>
+            </div>
+            <div id="dialog-description" class="row description">
+                <h5>Precio Promedio: <span id="service-price">100$</span></h5>
+                <h6>Descripción</h6>
+                <p id="service-description"></p>
+                <h6>Caracteristicas</h6>
+                <div class="col-md-12">
+                    <ul id="service-feactures">
+                    </ul>
+                </div>
+                <form action="" method="post">
+                    <input type="email" class="form-control" id="email"
+                        placeholder="Ingrese su correo electronico para más información">
+                    <button type="submit" class="btn btn-primary">Pedir presupueto</button>
+                </form>
+                <div class="btn-cancel">
+                    <button onclick="openCloseDescription(false);" class="btn btn-danger">Cancelar</button>
+                </div>
+            </div>
+        </div>
+        <a class="button" href="services.html">Ver más</a>
+    </div>
+
+    <footer>
+        <p><br>Miguel Piña 2019 &COPY;</p>
+    </footer>
+
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/shrink-header.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/index/slideshow.js"></script>
+    <script src="js/index/services.js"></script>
+    <script src="js/index/onload.js"></script>
+
+</body>
+
+</html>

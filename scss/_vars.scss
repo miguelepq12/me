@@ -1,0 +1,17 @@
+/*Valores de NavBar*/
+$count-navbar-item:5;
+$size-item-navbar:95/$count-navbar-item*1%;
+$height-navbar:70px;
+$size-img-profile-big:200;
+$size-img-profile-medium:120;
+$size-img-profile-small:80;
+$adjust-navbar:($size-img-profile-big*1px) - $height-navbar;
+$text-size-navbar:16px;
+$text-color-navbar:#3a3a3a;
+
+
+/*Valores footer*/
+$height-footer:60px;
+
+
+/*Valores de project*/
