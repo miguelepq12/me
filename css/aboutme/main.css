@@ -67,81 +67,83 @@
     -moz-box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.3);
     box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.3); }
   /* line 55, ../../scss/aboutme/main.scss */
-  .body-aboutme .adjust {
+  .body-aboutme .adjust-sidenav {
     z-index: 20; }
-  /* line 59, ../../scss/aboutme/main.scss */
+  /* line 60, ../../scss/aboutme/main.scss */
   .body-aboutme .sidenav-item {
     padding: 15px 0px;
     text-align: center;
     cursor: pointer;
     overflow: hidden; }
-    /* line 69, ../../scss/aboutme/main.scss */
+    /* line 70, ../../scss/aboutme/main.scss */
     .body-aboutme .sidenav-item:hover .text {
       display: block; }
-    /* line 73, ../../scss/aboutme/main.scss */
+    /* line 74, ../../scss/aboutme/main.scss */
     .body-aboutme .sidenav-item:hover img {
       width: 50%; }
-    /* line 78, ../../scss/aboutme/main.scss */
+    /* line 79, ../../scss/aboutme/main.scss */
     .body-aboutme .sidenav-item img {
       width: 40%;
       opacity: 0.75; }
-    /* line 82, ../../scss/aboutme/main.scss */
+    /* line 83, ../../scss/aboutme/main.scss */
     .body-aboutme .sidenav-item .text {
       display: none;
       font-size: 0.6em;
       font-weight: 600;
       opacity: 0.8; }
-  /* line 94, ../../scss/aboutme/main.scss */
+  /* line 95, ../../scss/aboutme/main.scss */
   .body-aboutme .sidenav-item.select .text {
     display: block; }
-  /* line 97, ../../scss/aboutme/main.scss */
+  /* line 98, ../../scss/aboutme/main.scss */
   .body-aboutme .sidenav-item.select img {
     width: 50%; }
-  /* line 102, ../../scss/aboutme/main.scss */
+  /* line 103, ../../scss/aboutme/main.scss */
   .body-aboutme .content {
     width: 100%;
     position: relative;
-    display: flex;
+    display: flex; }
+  /* line 111, ../../scss/aboutme/main.scss */
+  .body-aboutme .adjust-content {
     overflow: hidden; }
-  /* line 109, ../../scss/aboutme/main.scss */
+  /* line 115, ../../scss/aboutme/main.scss */
   .body-aboutme .side-arrow-left {
     -webkit-box-shadow: 3px 0px 5px -3px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 3px 0px 5px -3px rgba(0, 0, 0, 0.3);
     box-shadow: 3px 0px 5px -3px rgba(0, 0, 0, 0.3); }
-  /* line 113, ../../scss/aboutme/main.scss */
+  /* line 119, ../../scss/aboutme/main.scss */
   .body-aboutme .side-arrow-right {
     -webkit-box-shadow: -3px 0px 5px -3px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: -3px 0px 5px -3px rgba(0, 0, 0, 0.3);
     box-shadow: -3px 0px 5px -3px rgba(0, 0, 0, 0.3); }
-  /* line 118, ../../scss/aboutme/main.scss */
+  /* line 124, ../../scss/aboutme/main.scss */
   .body-aboutme .box-content {
     width: 90%;
     display: flex;
     overflow: hidden;
     align-items: flex-start; }
-  /* line 125, ../../scss/aboutme/main.scss */
+  /* line 131, ../../scss/aboutme/main.scss */
   .body-aboutme .box-content-item {
     min-height: 50vh;
     z-index: 5;
     width: 100%;
     flex: none;
     position: relative; }
-    /* line 133, ../../scss/aboutme/main.scss */
+    /* line 139, ../../scss/aboutme/main.scss */
     .body-aboutme .box-content-item .img {
       width: 100%;
       height: 30vh; }
-    /* line 138, ../../scss/aboutme/main.scss */
+    /* line 144, ../../scss/aboutme/main.scss */
     .body-aboutme .box-content-item .text {
       padding: 30px; }
-    /* line 142, ../../scss/aboutme/main.scss */
+    /* line 148, ../../scss/aboutme/main.scss */
     .body-aboutme .box-content-item p {
       text-align: justify;
       margin-top: 10px;
       margin-left: 10px; }
-    /* line 147, ../../scss/aboutme/main.scss */
+    /* line 153, ../../scss/aboutme/main.scss */
     .body-aboutme .box-content-item h4 {
       font-weight: 700; }
-  /* line 152, ../../scss/aboutme/main.scss */
+  /* line 158, ../../scss/aboutme/main.scss */
   .body-aboutme .move-box {
     animation: move-up 1s; }
 @keyframes move-up {
@@ -151,7 +153,7 @@
     transform: translateY(-100%); }
   to {
     transform: translateY(0%); } }
-  /* line 168, ../../scss/aboutme/main.scss */
+  /* line 174, ../../scss/aboutme/main.scss */
   .body-aboutme .reduce-expand {
     animation: reduce-item 1s; }
 @keyframes reduce-item {
@@ -160,36 +162,36 @@
   to {
     transform: 0%; } }
   @media (max-width: 767.98px) {
-    /* line 182, ../../scss/aboutme/main.scss */
+    /* line 188, ../../scss/aboutme/main.scss */
     .body-aboutme .box-aboutme {
       display: flex;
       flex-direction: column; }
-    /* line 187, ../../scss/aboutme/main.scss */
+    /* line 193, ../../scss/aboutme/main.scss */
     .body-aboutme .sidenav {
       width: 100%;
       -webkit-box-shadow: 0px 3px 4px -4px rgba(0, 0, 0, 0.3);
       -moz-box-shadow: 0px 3px 4px -4px rgba(0, 0, 0, 0.3);
       box-shadow: 0px 3px 4px -4px rgba(0, 0, 0, 0.3); }
-    /* line 192, ../../scss/aboutme/main.scss */
+    /* line 198, ../../scss/aboutme/main.scss */
     .body-aboutme .sidenav-item {
       padding: 10px 0px;
       display: flex;
       align-items: center; }
-      /* line 196, ../../scss/aboutme/main.scss */
+      /* line 202, ../../scss/aboutme/main.scss */
       .body-aboutme .sidenav-item img {
         width: 10%;
         margin: 0px 20px; }
-      /* line 200, ../../scss/aboutme/main.scss */
+      /* line 206, ../../scss/aboutme/main.scss */
       .body-aboutme .sidenav-item .text {
         display: block; }
-    /* line 206, ../../scss/aboutme/main.scss */
+    /* line 212, ../../scss/aboutme/main.scss */
     .body-aboutme .sidenav-item.select img {
       width: 10%; }
-    /* line 211, ../../scss/aboutme/main.scss */
+    /* line 217, ../../scss/aboutme/main.scss */
     .body-aboutme .side-arrow-left {
       height: auto;
       width: 10%; }
-    /* line 215, ../../scss/aboutme/main.scss */
+    /* line 221, ../../scss/aboutme/main.scss */
     .body-aboutme .side-arrow-right {
       height: auto;
       width: 10%; } }

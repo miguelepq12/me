@@ -189,5 +189,9 @@ function isScreenMd() {
 }
 
 function adjustSideNav() {
-    document.getElementById("sidenav").classList.add("adjust");
+    document.getElementById("sidenav").classList.add("adjust-sidenav");
+}
+
+function adjustSideNav() {
+    document.getElementById("content").classList.add("adjust-content");
 }

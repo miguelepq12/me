@@ -52,9 +52,10 @@
         @include shadow(1px, 1px, 4px, -1px, rgba(0,0,0,0.3));
     }
 
-    .adjust{
+    .adjust-sidenav{
         z-index: 20;
     }
+
 
     .sidenav-item{
         padding: 15px 0px;
@@ -103,8 +104,11 @@
         width: 100%;
         position: relative;
         display: flex;
-        overflow: hidden;
     }
+    
+    .adjust-content{
+        overflow: hidden;
+     }
 
     .side-arrow-left{
         @extend %side-arrow;
