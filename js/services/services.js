@@ -83,7 +83,7 @@ function changeSelectService($id,$unselect){
 function openCloseDescription($open){
     if($open){
         $( "#dialog-description" ).animate({
-            maxHeight: $("#dialog-description").get(0).scrollHeight+(2*vwTOpx(3)),
+            maxHeight: $("#services").get(0).scrollHeight,
             padding: "3vw"
           }, 1000);
           $('html, body').animate({
@@ -98,16 +98,3 @@ function openCloseDescription($open){
           });
     }
 }
-
-
-function vwTOpx(value) {
-    var w = window,
-      d = document,
-      e = d.documentElement,
-      g = d.getElementsByTagName('body')[0],
-      x = w.innerWidth || e.clientWidth || g.clientWidth,
-      y = w.innerHeight|| e.clientHeight|| g.clientHeight;
-  
-    var result = (x*value)/100;
-    return result;
-  }

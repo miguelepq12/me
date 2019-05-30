@@ -305,6 +305,7 @@
         }
 
         @include media-breakpoint-down(sm) {
+            padding: 0px;
             flex-wrap: wrap;
 
             button{
@@ -318,6 +319,10 @@
         width: 100%;
         margin-top: 5px;
         text-align: center;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 0px;
+        }
     }
 
 }

@@ -301,12 +301,17 @@
     @media (max-width: 767.98px) {
       /* line 298, ../../scss/index/main.scss */
       .services form {
+        padding: 0px;
         flex-wrap: wrap; }
-        /* line 310, ../../scss/index/main.scss */
+        /* line 311, ../../scss/index/main.scss */
         .services form button {
           margin: 10px auto; } }
-  /* line 317, ../../scss/index/main.scss */
+  /* line 318, ../../scss/index/main.scss */
   .services .btn-cancel {
     width: 100%;
     margin-top: 5px;
     text-align: center; }
+    @media (max-width: 767.98px) {
+      /* line 318, ../../scss/index/main.scss */
+      .services .btn-cancel {
+        margin-top: 0px; } }
