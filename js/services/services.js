@@ -56,6 +56,7 @@ function cancelService() {
 
 function changeValues($id){
 
+    document.getElementById("service-id").value=$id;
     document.getElementById("service-price").innerHTML = serviceItems[$id]["price"] + serviceItems[$id]["currency"];
     document.getElementById("service-description").innerHTML = serviceItems[$id]["description"];
     document.getElementById("service-feactures").innerHTML ="";
@@ -76,6 +77,8 @@ function changeSelectService($id,$unselect){
 
     if(!$unselect){
         document.getElementById("s-item-"+$id).className="service press col-md-4";
+        document.getElementById("service-message").hidden=true;
+        document.getElementById("email").value="";
     }
     
 }
@@ -97,4 +100,26 @@ function openCloseDescription($open){
             changeSelectService(-1,true);
           });
     }
+}
+
+function sendEmail(){
+    var email=document.getElementById("email").value;
+    var id=document.getElementById("service-id").value;
+
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "miguelepinaq@gmail.com",
+        Password : "2ae190d5-425a-4247-bec2-9b4002e0af6d",
+        To : 'miguelepinaq@gmail.com',
+        From : "miguelepinaq@gmail.com",
+        Subject : "Presupuesto de "+serviceItems[id]["name"],
+        Body : 
+        "Necesito un presupuesto de: "+serviceItems[id]["name"]+". "+
+        "Descripción: "+serviceItems[id]["description"]+ " "+
+        "Para el correo: "+email
+    }).then(
+      message => document.getElementById("service-message").hidden=false
+    );
+
+    return false;
 }

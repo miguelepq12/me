@@ -64,15 +64,16 @@
             <div class="area-personal col-md-6">
                 <div class="content-area">
                     <img src="img/svg/personal.svg" onerror="this.onerror=null; this.src='img/personal.png'">
-                    <p>Apasionado desarrollador desde joven. <br/>Comprometido y responsable con sus proyectos.
+                    <p>Apasionado desarrollador desde joven. <br />Comprometido y responsable con sus proyectos.
                     </p>
                 </div>
             </div>
             <div class="area-jobs col-md-6">
                 <div class="content-area">
                     <img src="img/svg/jobs.svg" onerror="this.onerror=null; this.src='img/jobs.png'">
-                    <p>Experiencia principalmente en Java y Android nativo. <br/>Conocedor practico de lenguajes como C#, PHP
-                        y JS. <br/>Actualmente desarrollador web con el framework Spring.</p>
+                    <p>Experiencia principalmente en Java y Android nativo. <br />Conocedor practico de lenguajes como
+                        C#, PHP
+                        y JS. <br />Actualmente desarrollador web con el framework Spring.</p>
                 </div>
             </div>
             <div class="area-skills col-md-6">
@@ -153,13 +154,17 @@
                     <ul id="service-feactures">
                     </ul>
                 </div>
-                <form action="" method="post">
+                <form onsubmit="return sendEmail()" method="post">
+                    <input type="hidden" name="id" id="service-id">
                     <input type="email" class="form-control" id="email"
-                        placeholder="Ingrese su correo electronico para más información">
+                        placeholder="Ingrese su correo electronico para más información" required>
                     <button type="submit" class="btn btn-primary">Pedir presupueto</button>
                 </form>
                 <div class="btn-cancel">
                     <button onclick="openCloseDescription(false);" class="btn btn-danger">Cancelar</button>
+                </div>
+                <div hidden id="service-message" style="width: 100%; margin-top:50px;" class="alert alert-primary" role="alert">
+                    Petición enviada. Pronto me pondré en contacto con usted. 
                 </div>
             </div>
         </div>
@@ -179,6 +184,8 @@
     <script src="js/index/slideshow.js"></script>
     <script src="js/index/services.js"></script>
     <script src="js/index/onload.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
 </body>
 

@@ -156,7 +156,7 @@
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3); }
     /* line 159, ../../scss/projects/main.scss */
     .list-clients .client-item:hover {
-      transform: scale(1.1); }
+      transform: scale(1.05); }
   /* line 167, ../../scss/projects/main.scss */
   .list-clients .img {
     padding: 10px;

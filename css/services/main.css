@@ -131,23 +131,24 @@
       /* line 123, ../../scss/services/main.scss */
       .services-body form {
         padding: 0px;
-        flex-wrap: wrap; }
-        /* line 141, ../../scss/services/main.scss */
+        flex-wrap: wrap;
+        justify-content: center; }
+        /* line 142, ../../scss/services/main.scss */
         .services-body form button {
           margin: 10px auto; } }
-  /* line 148, ../../scss/services/main.scss */
+  /* line 149, ../../scss/services/main.scss */
   .services-body .btn-cancel {
     width: 100%;
     margin-top: 5px;
     text-align: center; }
     @media (max-width: 767.98px) {
-      /* line 148, ../../scss/services/main.scss */
+      /* line 149, ../../scss/services/main.scss */
       .services-body .btn-cancel {
         margin-top: 0px; } }
-  /* line 159, ../../scss/services/main.scss */
+  /* line 160, ../../scss/services/main.scss */
   .services-body .open-dialog {
     animation: dialog-anim 1s forwards; }
-  /* line 163, ../../scss/services/main.scss */
+  /* line 164, ../../scss/services/main.scss */
   .services-body .close-dialog {
     animation: dialog-anim 1s reverse forwards; }
 @keyframes dialog-anim {
