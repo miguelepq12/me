@@ -119,8 +119,12 @@
   .services-body form {
     width: 100%;
     padding: 20px;
-    display: flex; }
-    /* line 128, ../../scss/services/main.scss */
+    display: flex;
+    align-items: center; }
+    /* line 129, ../../scss/services/main.scss */
+    .services-body form input[type="email"] {
+      width: 80%; }
+    /* line 133, ../../scss/services/main.scss */
     .services-body form button {
       margin: 0px 10px; }
     @media (max-width: 767.98px) {
@@ -128,22 +132,22 @@
       .services-body form {
         padding: 0px;
         flex-wrap: wrap; }
-        /* line 136, ../../scss/services/main.scss */
+        /* line 141, ../../scss/services/main.scss */
         .services-body form button {
           margin: 10px auto; } }
-  /* line 143, ../../scss/services/main.scss */
+  /* line 148, ../../scss/services/main.scss */
   .services-body .btn-cancel {
     width: 100%;
     margin-top: 5px;
     text-align: center; }
     @media (max-width: 767.98px) {
-      /* line 143, ../../scss/services/main.scss */
+      /* line 148, ../../scss/services/main.scss */
       .services-body .btn-cancel {
         margin-top: 0px; } }
-  /* line 154, ../../scss/services/main.scss */
+  /* line 159, ../../scss/services/main.scss */
   .services-body .open-dialog {
     animation: dialog-anim 1s forwards; }
-  /* line 158, ../../scss/services/main.scss */
+  /* line 163, ../../scss/services/main.scss */
   .services-body .close-dialog {
     animation: dialog-anim 1s reverse forwards; }
 @keyframes dialog-anim {

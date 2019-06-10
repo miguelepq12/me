@@ -124,7 +124,12 @@
         width: 100%;
         padding: 20px;
         display: flex;
+        align-items: center;
 
+        input[type="email"]{
+            width: 80%;
+        }
+        
         button{
             margin: 0px 10px;
         }

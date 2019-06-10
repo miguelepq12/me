@@ -294,8 +294,12 @@
   .services form {
     width: 100%;
     padding: 20px;
-    display: flex; }
-    /* line 303, ../../scss/index/main.scss */
+    display: flex;
+    align-items: center; }
+    /* line 304, ../../scss/index/main.scss */
+    .services form input[type="email"] {
+      width: 80%; }
+    /* line 308, ../../scss/index/main.scss */
     .services form button {
       margin: 0px 10px; }
     @media (max-width: 767.98px) {
@@ -303,15 +307,15 @@
       .services form {
         padding: 0px;
         flex-wrap: wrap; }
-        /* line 311, ../../scss/index/main.scss */
+        /* line 316, ../../scss/index/main.scss */
         .services form button {
           margin: 10px auto; } }
-  /* line 318, ../../scss/index/main.scss */
+  /* line 323, ../../scss/index/main.scss */
   .services .btn-cancel {
     width: 100%;
     margin-top: 5px;
     text-align: center; }
     @media (max-width: 767.98px) {
-      /* line 318, ../../scss/index/main.scss */
+      /* line 323, ../../scss/index/main.scss */
       .services .btn-cancel {
         margin-top: 0px; } }
