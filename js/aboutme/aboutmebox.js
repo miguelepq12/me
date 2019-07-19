@@ -12,7 +12,7 @@ var aboutmeItems = [
     [{
         img: "img/cover_urbe.jpg",
         name: "Ingeniería informatica, Universidad Rafael Belloso Chacín (URBE) Venezuela",
-        description: "Estudiante de ingeniería Informatica cursando el ultimo trimestre y finalizando tesis. Obteniendo diferentes conocimientos como matematicas, logica, programación, sistemas operativos, compiladores, inteligencia artificial, ingeniería del software y seguridad."
+        description: "Ingeniero en Informatica a la espera de titulo. Carrera en la cual obtuve diferentes conocimientos como matematicas, logica, programación, sistemas operativos, compiladores, inteligencia artificial, ingeniería del software y seguridad."
     },
     {
         img: "img/cover_cedic.jpg",
